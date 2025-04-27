@@ -1,0 +1,47 @@
+{
+    "Admin": {
+      "description": "Has full control over the project, manages all roles.",
+      "permissions": [
+        "View All Tickets",
+        "Manage Users",
+        "Assign Roles",
+        "Access All Project Data"
+      ],
+      "reports_to": null
+    },
+    "Project Lead": {
+      "description": "Leads the project execution, manages engineers and designers.",
+      "permissions": [
+        "Manage Tickets",
+        "Assign Tasks",
+        "Access Project Reports"
+      ],
+      "reports_to": "Admin"
+    },
+    "Software Engineer": {
+      "description": "Develops, debugs, and maintains the software.",
+      "permissions": [
+        "Create Tickets",
+        "Update Code",
+        "Resolve Issues"
+      ],
+      "reports_to": "Project Lead"
+    },
+    "UI/UX Designer": {
+      "description": "Designs UI screens and improves user experience.",
+      "permissions": [
+        "Create Design Tickets",
+        "Suggest UI Improvements"
+      ],
+      "reports_to": "Project Lead"
+    },
+    "Testing Engineer": {
+      "description": "Tests applications and ensures software quality.",
+      "permissions": [
+        "Create Bug Reports",
+        "Test Features"
+      ],
+      "reports_to": "Project Lead"
+    }
+  }
+  

@@ -1,0 +1,37 @@
+{
+  "companyName": "Tech Innovations Inc.",
+  "companyId": "tech_innovations",
+    "users": {
+      "user_001": {
+        "name": "Alice Johnson",
+        "roles": ["admin"],
+        "designation": "Project Manager"
+      },
+      "user_002": {
+        "name": "Bob Smith",
+        "roles": ["project_lead"],
+        "designation": "Project Lead"
+      },
+      "user_003": {
+        "name": "Charlie Brown",
+        "roles": ["software_engineer"],
+        "designation": "Software Engineer"
+      },
+      "user_004": {
+        "name": "Dana White",
+        "roles": ["ui_ux_designer"],
+        "designation":"ui ux designer"
+      },
+      "user_005": {
+        "name": "Eve Black",
+        "roles": ["testing_engineer"],
+        "designation":"Software Engineer Tester"
+      },
+      "user_006": {
+        "name": "Frank Green",
+        "roles": ["software_engineer", "testing_engineer"],
+        "designation":"Software Engineer"
+      }
+    }
+  }
+  
