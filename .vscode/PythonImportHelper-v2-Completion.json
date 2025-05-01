@@ -1,0 +1,239 @@
+[
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ask_ai",
+        "importPath": "app.services.agent",
+        "description": "app.services.agent",
+        "isExtraImport": true,
+        "detail": "app.services.agent",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "AssistantAgent",
+        "importPath": "autogen",
+        "description": "autogen",
+        "isExtraImport": true,
+        "detail": "autogen",
+        "documentation": {}
+    },
+    {
+        "label": "UserProxyAgent",
+        "importPath": "autogen",
+        "description": "autogen",
+        "isExtraImport": true,
+        "detail": "autogen",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "APP_NAME",
+        "importPath": "app.config",
+        "description": "app.config",
+        "isExtraImport": true,
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "assistant",
+        "importPath": "app.routes",
+        "description": "app.routes",
+        "isExtraImport": true,
+        "detail": "app.routes",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionRequest",
+        "kind": 6,
+        "importPath": "recommendationsystem-backend.app.routes.assistant",
+        "description": "recommendationsystem-backend.app.routes.assistant",
+        "peekOfCode": "class QuestionRequest(BaseModel):\n    question: str\n@router.post(\"/ask\")\nasync def ask_question(payload: QuestionRequest):\n    \"\"\"\n    Endpoint to handle recommendation questions with verification\n    Args:\n        payload: QuestionRequest containing the user's question\n    Returns:\n        dict: {\"response\": \"answer\"} or error message",
+        "detail": "recommendationsystem-backend.app.routes.assistant",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "recommendationsystem-backend.app.routes.assistant",
+        "description": "recommendationsystem-backend.app.routes.assistant",
+        "peekOfCode": "router = APIRouter()\n# Configure logging\nlogging.basicConfig(level=logging.INFO)\nlogger = logging.getLogger(__name__)\nclass QuestionRequest(BaseModel):\n    question: str\n@router.post(\"/ask\")\nasync def ask_question(payload: QuestionRequest):\n    \"\"\"\n    Endpoint to handle recommendation questions with verification",
+        "detail": "recommendationsystem-backend.app.routes.assistant",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "recommendationsystem-backend.app.routes.assistant",
+        "description": "recommendationsystem-backend.app.routes.assistant",
+        "peekOfCode": "logger = logging.getLogger(__name__)\nclass QuestionRequest(BaseModel):\n    question: str\n@router.post(\"/ask\")\nasync def ask_question(payload: QuestionRequest):\n    \"\"\"\n    Endpoint to handle recommendation questions with verification\n    Args:\n        payload: QuestionRequest containing the user's question\n    Returns:",
+        "detail": "recommendationsystem-backend.app.routes.assistant",
+        "documentation": {}
+    },
+    {
+        "label": "RecommendationSystem",
+        "kind": 6,
+        "importPath": "recommendationsystem-backend.app.services.agent",
+        "description": "recommendationsystem-backend.app.services.agent",
+        "peekOfCode": "class RecommendationSystem:\n    def __init__(self):\n        self.config = self._load_config()\n        self.assistant, self.verifier, self.user_proxy = self._initialize_agents()\n    def _load_config(self) -> Dict[str, Any]:\n        \"\"\"Load configuration and data files\"\"\"\n        BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))\n        data_dir = os.path.join(BASE_DIR, \"data\")\n        return {\n            \"roles_data\": self._load_json_file(os.path.join(data_dir, \"project_roles_knowledge.json\")),",
+        "detail": "recommendationsystem-backend.app.services.agent",
+        "documentation": {}
+    },
+    {
+        "label": "ask_ai",
+        "kind": 2,
+        "importPath": "recommendationsystem-backend.app.services.agent",
+        "description": "recommendationsystem-backend.app.services.agent",
+        "peekOfCode": "def ask_ai(question: str) -> str:\n    \"\"\"Public interface for the recommendation system\"\"\"\n    return recommendation_system.ask_ai(question)",
+        "detail": "recommendationsystem-backend.app.services.agent",
+        "documentation": {}
+    },
+    {
+        "label": "recommendation_system",
+        "kind": 5,
+        "importPath": "recommendationsystem-backend.app.services.agent",
+        "description": "recommendationsystem-backend.app.services.agent",
+        "peekOfCode": "recommendation_system = RecommendationSystem()\ndef ask_ai(question: str) -> str:\n    \"\"\"Public interface for the recommendation system\"\"\"\n    return recommendation_system.ask_ai(question)",
+        "detail": "recommendationsystem-backend.app.services.agent",
+        "documentation": {}
+    },
+    {
+        "label": "APP_NAME",
+        "kind": 5,
+        "importPath": "recommendationsystem-backend.app.config",
+        "description": "recommendationsystem-backend.app.config",
+        "peekOfCode": "APP_NAME = os.getenv(\"APP_NAME\", \"Ticket Assistant\")\nMONGO_URI = os.getenv(\"MONGO_URI\", \"mongodb://localhost:27017\")",
+        "detail": "recommendationsystem-backend.app.config",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "recommendationsystem-backend.app.config",
+        "description": "recommendationsystem-backend.app.config",
+        "peekOfCode": "MONGO_URI = os.getenv(\"MONGO_URI\", \"mongodb://localhost:27017\")",
+        "detail": "recommendationsystem-backend.app.config",
+        "documentation": {}
+    },
+    {
+        "label": "home",
+        "kind": 2,
+        "importPath": "recommendationsystem-backend.app.main",
+        "description": "recommendationsystem-backend.app.main",
+        "peekOfCode": "def home():\n    return {\"message\": f\"{APP_NAME} is running 🚀\"}",
+        "detail": "recommendationsystem-backend.app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "recommendationsystem-backend.app.main",
+        "description": "recommendationsystem-backend.app.main",
+        "peekOfCode": "app = FastAPI(title=APP_NAME)\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"*\"],\n    allow_methods=[\"*\"],\n    allow_headers=[\"*\"],\n)\n# Register routes\napp.include_router(assistant.router, prefix=\"/api\")\n@app.get(\"/\")",
+        "detail": "recommendationsystem-backend.app.main",
+        "documentation": {}
+    }
+]

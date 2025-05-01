@@ -1,0 +1,17 @@
+{
+  "Project Manager": {
+    "description": "Oversees project execution and team coordination",
+    "permissions": ["create_tasks", "assign_tasks", "view_reports", "approve_leave"],
+    "reports_to": "Department Head"
+  },
+  "Developer": {
+    "description": "Implements software features and fixes bugs",
+    "permissions": ["view_tasks", "update_task_status", "request_leave"],
+    "reports_to": "Project Manager"
+  },
+  "Department Head": {
+    "description": "Manages multiple projects and teams",
+    "permissions": ["create_projects", "view_all_reports", "approve_budget", "hire_staff"],
+    "reports_to": "CEO"
+  }
+}

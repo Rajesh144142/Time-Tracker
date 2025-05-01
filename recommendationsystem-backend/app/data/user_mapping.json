@@ -1,0 +1,21 @@
+{
+  "companyName": "TechSolutions Inc.",
+  "companyId": "TSI-2024",
+  "users": {
+    "user1": {
+      "name": "John Doe",
+      "roles": ["Project Manager"],
+      "designation": "Senior Project Manager"
+    },
+    "user2": {
+      "name": "Jane Smith",
+      "roles": ["Developer"],
+      "designation": "Software Engineer II"
+    },
+    "user3": {
+      "name": "Robert Johnson",
+      "roles": ["Department Head"],
+      "designation": "Head of Engineering"
+    }
+  }
+}
